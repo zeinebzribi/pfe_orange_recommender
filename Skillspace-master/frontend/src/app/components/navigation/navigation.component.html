@@ -1,0 +1,97 @@
+
+  <!--div >
+    <a href="/"><img routerLink="/home" src="assets/logo skill blanc@2x.png" alt="Logo Orange" class="logo"></a>
+
+
+    <a *ngIf="isAuthenticated" routerLinkActive="active-link" routerLink="/posts"><span><img  src="/assets/img/aarbi@2x.png"></span></a>
+    <a *ngIf="!isAuthenticated" routerLinkActive="active-link" routerLink="/login"><button mat-button class="login">Login</button></a>
+    <a *ngIf="isAuthenticated" (click)="logout()" routerLinkActive="active-link" routerLink="/home"><button mat-button class="logout">Logout</button></a>
+    <a *ngIf="!isAuthenticated" routerLinkActive="active-link" routerLink="/signup"> <button mat-button class="signup">Signup</button></a>
+  </div-->
+    <!--a routerLink="/"><span></span></a-->
+    
+    <!--a class="recherche"> <input type="text" value="Recherche"></a-->
+    <!--a><mat-icon matBadge="15" matBadgeColor="panier">home</mat-icon> </a-->
+   
+    
+
+<mat-toolbar style="width: 100%;">
+ 
+  <span>
+    <!--a>
+      <span><img routerLink="/home" src="assets/logo skill blanc@2x.png" class="header_menu_logo" alt="Logo Orange"></span>
+    </a-->  
+    <a routerLink="/">
+      <span></span>
+
+    </a>
+  </span>
+
+ 
+  <span>
+
+    <a>
+      <span><img routerLink="/home" src="assets/logo skill blanc@2x.png" class="header_menu_logo" alt="Logo Orange"></span>
+    </a>
+    
+
+    <a>
+      <span><input type="text" placeholder="Recherche" class="recherche"></span>
+    </a>
+
+    <a
+    
+    *ngIf="isAuthenticated"
+    routerLinkActive="active-link"
+    routerLink="/notifapp"
+    >
+      <span><img src="/assets/img/Shape@2x.png" alt="Med Arbi" class="imgnotif"></span>
+    </a>
+
+    <a
+    *ngIf="isAuthenticated"
+    routerLinkActive="active-link"
+    routerLink="/panier"
+  >
+    <span><img src="/assets/img/Functional_UI - ic_Buy@2x.png" alt="Med Arbi" class="imgpan"></span>
+  </a>
+ 
+  <a
+    
+  *ngIf="isAuthenticated"
+  routerLinkActive="active-link"
+  routerLink="/posts"
+  >
+    <span><img src="/assets/img/aarbi@2x.png" alt="Med Arbi" class="imgprof"></span>
+  </a>
+
+    <a
+      *ngIf="!isAuthenticated"  
+      routerLinkActive="active-link"
+      routerLink="/login"
+    >
+    <button mat-button class="login">Login</button>
+    </a>
+    <a
+      *ngIf="isAuthenticated"
+      (click)="logout()"
+      routerLinkActive="active-link"
+      routerLink="/login"
+    >
+    <button mat-button class="logout">Logout</button>
+    </a>
+    <a
+      *ngIf="!isAuthenticated"
+      routerLinkActive="active-link"
+      routerLink="/signup"
+    >
+    <button mat-button class="signup">Signup</button>
+    </a>
+  </span>
+
+</mat-toolbar>
+
+
+
+
+

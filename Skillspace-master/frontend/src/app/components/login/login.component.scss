@@ -1,0 +1,53 @@
+mat-form-field {
+  width: 100%;
+}
+
+button {
+  color: black;
+  background-color: #ff7500;
+  float: right;
+  width: 200px;
+}
+
+input {
+  height: 40px;
+  width: 1110px;
+  border: 2px solid var(--unnamed-color-cccccc);
+background: #FFFFFF 0% 0% no-repeat padding-box;
+border: 2px solid #CCCCCC;
+opacity: 1;
+}
+
+
+h1{
+  text-align: left;
+font: normal normal bold 40px/57px Arial;
+letter-spacing: -0.24px;
+color: #000000;
+opacity: 1;
+}
+
+
+a{
+  color: #000000;
+  font: normal normal bold 15px/15px Arial;
+}
+
+a:link {
+  color: black;
+  background-color: transparent;
+  text-decoration: none;
+}
+
+
+a:hover {
+  color: #ff7500;
+  background-color: transparent;
+  text-decoration: underline;
+}
+
+a:active {
+  color: #ff7500;
+  background-color: transparent;
+  text-decoration: underline;
+}

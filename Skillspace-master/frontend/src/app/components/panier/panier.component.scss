@@ -1,0 +1,45 @@
+div {
+    top: 10px;
+left: 0px;
+width: 2000px;
+height: 500px;
+background: rgb(255, 255, 255) 0% 0% no-repeat padding-box;
+opacity: 1;
+}
+
+.not1 {
+    position: absolute;
+    left: 400px;
+    top: 300px;
+    width: 750px;
+height: 80px;
+background-color: #e4e2e2;
+} 
+
+
+.monpanier {
+    position: absolute;
+    left: 400px;
+    top: 200px;
+      font: bold 40px/50px Arial;
+      color: black;
+}
+
+
+.descpanier {
+    position: absolute;
+    left: 30px;
+    top: 10px;
+      font: normal 15px/20px Arial;
+      color: black;
+
+}
+
+.despanier {
+    position: absolute;
+    left: 30px;
+    top: 30px;
+      font: bold 20px/30px Arial;
+      color: black;
+
+}

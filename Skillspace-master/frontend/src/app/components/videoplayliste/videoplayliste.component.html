@@ -1,0 +1,171 @@
+
+<div class="block1" style="width: 100%;">
+<p class="titreformation"> Apprenez à illustrer de A à Z</p>
+<a href="url">MED ARBI</a>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="block2" style="width: 100%;">
+
+
+
+    <div class="video-player-wrapper"> 
+
+        <vg-player (onPlayerReady)="videoPlayerInit($event)">
+          <vg-overlay-play></vg-overlay-play>
+          <vg-buffering></vg-buffering>
+    
+          <vg-scrub-bar>
+            <vg-scrub-bar-current-time></vg-scrub-bar-current-time>
+            <vg-scrub-bar-buffering-time></vg-scrub-bar-buffering-time>
+          </vg-scrub-bar>
+    
+          <vg-controls>
+            <vg-play-pause></vg-play-pause>
+            <vg-playback-button></vg-playback-button>
+    
+            <vg-time-display vgProperty="current" vgFormat="mm:ss"></vg-time-display>
+    
+            <vg-time-display vgProperty="total" vgFormat="mm:ss"></vg-time-display>
+    
+            <vg-mute></vg-mute>
+            <vg-volume></vg-volume>
+    
+            <vg-fullscreen></vg-fullscreen>
+          </vg-controls>
+    
+          <video #media [vgMedia]="media" [src]="currentVideo.src" id="singleVideo" preload="auto" crossorigin>
+          </video>
+        </vg-player>
+    
+         
+
+
+        <div class="divplayliste">
+          <h1 class="contenu">Contenu du cours</h1>
+          <button *ngFor="let vdo of videoItems; let $index = index"
+          (click)="startPlaylistVdo(vdo, $index)" [class.selected]="vdo === currentVideo" mat-button class="player-list2" >{{ vdo.name }}</button>
+        </div>
+        
+
+       
+
+        
+        
+        
+        
+        <!--ul class="player-list">
+          <li *ngFor="let vdo of videoItems; let $index = index"
+            (click)="startPlaylistVdo(vdo, $index)" [class.selected]="vdo === currentVideo">
+            {{ vdo.name }}
+          </li>
+        </ul-->
+    
+      </div>
+    
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="block3">
+
+
+<h1 class="prz">Présentation</h1>
+
+
+
+
+
+<p class="presentationformation">From elaborate animation projects to fun GIFs for social media, the leading
+     creative video editing software Adobe After Effects has no limits when it comes to animation design. This 
+     Domestika Basics includes 5 courses, to learn all there is to know about the software and get started 
+     on editing and designing animations like a professional. Discover a thorough learning method that’s filled with
+      resources, to become an expert motion graphics designer. Start by getting to know the interface and the workflow
+       layout that’s specific to After Effects, to work efficiently as soon as you begin.
+    </p>
+
+    <hr class="hr1">
+    <p class="cree">Créé par</p>
+    <a  href="url" class="nomfor" routerLink="/posts" >MED ARBI</a>
+    <p class="job">Développeur full stack</p>
+    <button class="abonnes">S'abonner</button>
+    <p class="descformateur">Javier Usobiaga has been working as a creative director, 2D and 3D animator and motion grapher for 
+        more than a decade. From the Maaambo studio, of which he is one of the founders, he regularly collaborates 
+        with some of the most prestigious production companies and agencies in Spain. In addition, he combines his
+         professional activity with teaching; He has been teaching motion graphics and 3D animation for more than six years
+          in some of the best-known schools and workshops in Madrid
+        </p>
+
+    <hr class="hr2">
+
+
+    <p class="creea">Créé par</p>
+    <a  href="url"  class="noma" routerLink="/posts" >MED ARBI</a>
+    <p class="lang">Français</p>
+    <p class="ressources">ressources téléchargeables</p>
+    <p class="paticipant">38k participants</p>
+
+
+<div class="achat">  
+</div>
+
+
+<div class="prix">
+    
+
+</div>
+
+</div>
+
+<p class="niv">Niveau : Débutant</p>
+<p class="solde">Prix</p>
+<p class="prixf">Gratuit</p>
+<button mat-raised-button class="buy" routerLink="/paiement">acheter</button>
+<img  routerLink="/posts" class="imgfor"src="assets/img/aarbi@2x.png">
+<img  routerLink="/posts" class="imgpfor"src="assets/img/aarbi@2x.png">
+
+
+<mat-grid-list cols="5" >
+
+  <mat-grid-tile *ngFor="let item of cours; index as i ">
+      <mat-card  class="example-card"  >
+
+          <img mat-card-image src="assets/img/blender_render-1280x720@2x.png" alt="Photo of a Shiba Inu" >
+          <mat-card-content>
+            <p >
+  
+              
+              {{ item["el"]["course_name"][item["index"]["index"][0]] }}
+
+            </p>
+
+          </mat-card-content>
+        
+        </mat-card>
+  </mat-grid-tile>
+</mat-grid-list>

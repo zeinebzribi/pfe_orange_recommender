@@ -1,0 +1,269 @@
+.block {
+    width: 1920px;
+height: 550px;
+background: #ffffff 0% 0% no-repeat padding-box;
+opacity: 1;
+}
+
+
+.valid {
+    width: 185px;
+height: 40px;
+position: absolute;
+    left: 375px;
+    top: 200px;
+
+font: normal normal bold 40px/57px Arial;
+letter-spacing: -0.24px;
+color: #000000;
+opacity: 1;
+}
+
+
+.blockvalid {
+    width: 690px;
+height: 100px;
+
+position: absolute;
+    left: 375px;
+    top: 320px;
+
+background: #000000 0% 0% no-repeat padding-box;
+border-radius: 4px;
+opacity: 0.04;
+}
+
+
+.resumcours {
+    width: 568px;
+height: 18px;
+
+position: absolute;
+    left: 510px;
+    top: 340px;
+
+text-align: left;
+font: normal normal normal 16px/24px Arial;
+letter-spacing: -0.11px;
+color: #000000;
+opacity: 1;
+}
+
+
+.prixresum {
+
+left: 510px;
+    top: 350px;
+
+    position: absolute;
+    left: 510px;
+    top: 370px;
+
+
+    width: 46px;
+    height: 17px;
+    text-align: left;
+    font: normal normal bold 16px/23px Arial;
+    letter-spacing: -0.11px;
+    color: #000000;
+    opacity: 1;
+}
+
+.methpay {
+    width: 396px;
+height: 24px;
+
+position: absolute;
+    left: 375px;
+    top: 450px;
+
+
+text-align: left;
+font: normal normal normal 24px/36px Arial;
+letter-spacing: -0.48px;
+color: #000000;
+opacity: 1;
+}
+
+
+.paytel {
+    position: absolute;
+    left: 420px;
+    top: 500px;
+    width: 328px;
+height: 41px;
+background: var(--unnamed-color-ff7900) 0% 0% no-repeat padding-box;
+background: #FF7900 0% 0% no-repeat padding-box;
+opacity: 1;
+
+}
+
+.payedinar {
+    position: absolute;
+    left: 420px;
+    top: 550px;
+    width: 328px;
+height: 41px;
+background: #000000 0% 0% no-repeat padding-box;
+opacity: 1;
+}
+
+
+.gris {
+
+    position: absolute;
+    left: 1300px;
+    top: 230px;
+    width: 342px;
+height: 287px;
+background: #000000 0% 0% no-repeat padding-box;
+border-radius: 4px;
+opacity: 0.04;
+}
+
+.total {
+
+    position: absolute;
+    left: 1320px;
+    top: 300px;
+
+    width: 308px;
+height: 37px;
+background: #FFFFFF 0% 0% no-repeat padding-box;
+border-radius: 4px;
+opacity: 1;
+}
+
+.noir {
+
+    position: absolute;
+    left: 1320px;
+    top: 420px;
+
+    width: 310px;
+height: 78px;
+background: #000000 0% 0% no-repeat padding-box;
+border-radius: 4px;
+opacity: 1;
+}
+
+.orange {
+
+    position: absolute;
+    left: 1336px;
+    top: 440px;
+
+    width: 281px;
+height: 36px;
+background: #F16E00 0% 0% no-repeat padding-box;
+opacity: 1;
+}
+
+
+.txtpytel {
+    position: absolute;
+    left: 470px;
+    top: 510px;
+
+
+    width: 300px;
+height: 16px;
+text-align: left;
+font: normal normal bold 16px/20px Arial;
+letter-spacing: -0.32px;
+color: #ffffff;
+opacity: 1;
+}
+
+.textpayedinar {
+    position: absolute;
+    left: 470px;
+    top: 560px;
+
+
+    width: 300px;
+height: 16px;
+text-align: left;
+font: normal normal bold 16px/20px Arial;
+letter-spacing: -0.32px;
+color: #ffffff;
+opacity: 1;
+}
+
+
+.txtresum {
+
+    position: absolute;
+    left: 1440px;
+    top: 250px;
+
+    width: 81px;
+height: 20px;
+text-align: left;
+font: normal normal bold 20px/22px Arial;
+letter-spacing: -0.4px;
+color: #000000;
+text-transform: capitalize;
+opacity: 1;
+}
+
+.txttotal {
+    position: absolute;
+    left: 50px;
+    top: 8px;
+
+    width: 60px;
+height: 16px;
+text-align: left;
+font: normal normal bold 16px/23px Arial;
+letter-spacing: -0.11px;
+color: #000000;
+opacity: 1;
+}
+
+
+.termpay
+{
+    position: absolute;
+    left: 75px;
+    top: 10px;
+
+    width: 200px;
+    height: 17px;
+    text-align: left;
+    font: normal normal bold 14px/17px Arial;
+    letter-spacing: -0.28px;
+    color: #ffffff;
+    opacity: 1;
+
+}
+
+
+.txtprix {
+    position: absolute;
+    left: 100px;
+    top: 8px;
+
+    width: 60px;
+height: 16px;
+text-align: left;
+font: normal normal bold 16px/23px Arial;
+letter-spacing: -0.11px;
+color: #000000;
+opacity: 1;
+}
+
+
+.imgcours {
+
+
+    position: absolute;
+    left: 400px;
+    top: 335px;
+
+
+    width: 91px;
+height: 63px;
+border-radius: 4px;
+opacity: 1;
+}

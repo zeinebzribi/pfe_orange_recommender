@@ -1,0 +1,256 @@
+div {
+    width: 2000px;
+    height: 600px;
+    background-color: #FAFAFA;  
+}
+
+.divv {
+    width: 460px;
+height: 571px;
+border: 1px solid var(--unnamed-color-cccccc);
+background: #FFFFFF 0% 0% no-repeat padding-box;
+border: 1px solid #CCCCCC;
+opacity: 1;
+position: absolute;
+    left: 250px;
+    top: 120px;
+}
+
+
+.divh {
+    width: 1000px;
+height: 73px;
+border: 1px solid var(--unnamed-color-cccccc);
+background: #FFFFFF 0% 0% no-repeat padding-box;
+border: 1px solid #CCCCCC;
+opacity: 1;
+position: absolute;
+    left: 710px;
+    top: 120px;
+}
+
+
+.divrima{
+    position: absolute;
+    left: 0px;
+    top: 70px;
+    width: 460px;
+    height: 88px;
+    background: #000000 0% 0% no-repeat padding-box;
+opacity: 0.04;
+
+}
+
+.divtaha {
+    position: absolute;
+    left: 0px;
+    top: 158px;
+    width: 458px;
+    height: 88px;
+    background: #ffffff 0% 0% no-repeat padding-box;
+    opacity: 0;
+
+
+}
+
+.divmalek{
+    position: absolute;
+    left: 0px;
+    top: 246px;
+    width: 458px;
+    height: 88px;
+    background: #ffffff 0% 0% no-repeat padding-box;
+    opacity: 0;
+
+}
+
+
+.message {
+    position: absolute;
+    left: 50px;
+    top: 30px;
+
+    width: 370px;
+height: 20px;
+text-align: left;
+font: normal normal bold 20px/22px Arial;
+letter-spacing: -0.4px;
+color: #000000;
+opacity: 1;
+}
+
+
+.nom 
+    {
+        position: absolute;
+        left: 450px;
+        top: 30px;
+    
+        width: 370px;
+    height: 20px;
+    text-align: left;
+    font: normal normal bold 20px/22px Arial;
+    letter-spacing: -0.4px;
+    color: #000000;
+    opacity: 1;
+    
+}
+
+
+.rima {
+    position: absolute;
+        left: 100px;
+        top: 85px;
+
+
+    width: 182px;
+height: 20px;
+text-align: left;
+font: normal normal bold 20px/22px Arial;
+letter-spacing: -0.4px;
+color: #000000;
+opacity: 1;
+}
+
+.txtrima {
+    position: absolute;
+        left: 100px;
+        top: 120px;
+
+
+    width: 300px;
+height: 20px;
+text-align: left;
+font: normal normal normal 16px/18px Arial;
+letter-spacing: -0.4px;
+color: #000000;
+opacity: 1;
+}
+
+
+
+.taha {
+    position: absolute;
+        left: 100px;
+        top: 175px;
+
+
+    width: 182px;
+height: 20px;
+text-align: left;
+font: normal normal bold 20px/22px Arial;
+letter-spacing: -0.4px;
+color: #000000;
+opacity: 1;
+}
+
+.txttaha {
+    position: absolute;
+        left: 100px;
+        top: 210px;
+
+
+    width: 300px;
+height: 20px;
+text-align: left;
+font: normal normal normal 16px/18px Arial;
+letter-spacing: -0.4px;
+color: #000000;
+opacity: 1;
+}
+
+
+.malek {
+    position: absolute;
+        left: 100px;
+        top: 260px;
+
+
+    width: 182px;
+height: 20px;
+text-align: left;
+font: normal normal bold 20px/22px Arial;
+letter-spacing: -0.4px;
+color: #000000;
+opacity: 1;
+}
+
+.txtmalek {
+    position: absolute;
+        left: 100px;
+        top: 290px;
+
+
+    width: 300px;
+height: 20px;
+text-align: left;
+font: normal normal normal 16px/18px Arial;
+letter-spacing: -0.4px;
+color: #000000;
+opacity: 1;
+}
+
+
+
+.imgrima {
+    position: absolute;
+        left: 25px;
+        top: 85px;
+}
+
+.imgtaha {
+    position: absolute;
+        left: 25px;
+        top: 175px;
+}
+
+
+.imgmalek {
+    position: absolute;
+        left: 25px;
+        top: 255px;
+}
+
+
+
+input {
+    position: absolute;
+    left: 730px;
+    top: 615px;
+
+
+    text-align: left;
+font: normal normal normal 18px/18px Arial;
+letter-spacing: -0.13px;
+color: #000000;
+
+
+
+    width: 827px;
+height: 75px;
+background: #fcfcfc 0% 0% no-repeat padding-box;
+border-radius: 4px;
+opacity: 1;
+}
+
+
+button {
+    position: absolute;
+    left: 1580px;
+    top: 630px;
+
+
+
+    width: 101px;
+height: 37px;
+background: var(--unnamed-color-ff7900) 0% 0% no-repeat padding-box;
+background: #FF7900 0% 0% no-repeat padding-box;
+opacity: 1;
+
+
+text-align: left;
+font: normal normal bold 16px/18px Arial;
+letter-spacing: -0.11px;
+color: #000000;
+opacity: 1;
+}

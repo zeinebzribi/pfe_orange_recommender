@@ -1,0 +1,31 @@
+<!--button (click)="isOpen = !isOpen" mat-raised-button>
+  <mat-icon>add</mat-icon>Crée un formation</button>
+  <mat-icon>deleate</mat-icon-->
+
+<!--form
+  *ngIf="isOpen"
+  [formGroup]="form"
+
+  #formDirective="ngForm"
+  (ngSubmit)="onSubmit(form.value)"
+  novalidate
+>
+  <mat-form-field>
+    <mat-label>Formation Title</mat-label>
+    <input matInput formControlName="title" />
+  </mat-form-field>
+  <mat-form-field>
+    <mat-label>Formation body</mat-label>
+    <input matInput formControlName="body" />
+  </mat-form-field>
+
+
+
+  <button [disabled]="!form.valid" mat-raised-button type="submit">
+    <span>Ajouter</span>
+  </button>
+</form-->
+
+<app-apprenant></app-apprenant>
+
+

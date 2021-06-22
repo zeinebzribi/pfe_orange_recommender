@@ -1,0 +1,43 @@
+.container1{
+    top: 100px;
+left: 0px;
+width: 1920px;
+height: 330px;
+background: #000000 0% 0% no-repeat padding-box;
+opacity: 1;
+}
+
+
+h1 {
+    position: absolute;
+  left: 450px;
+  top: 250px;
+    font: bold 70px/60px Arial;
+    color: white;
+}
+
+
+.container{
+    top: 100px;
+left: 0px;
+width: 1920px;
+height: auto;
+background: white 0% 0% no-repeat padding-box;
+opacity: 1;
+}
+
+.mat-card {
+    background: #000000 0% 0% no-repeat padding-box;
+    border-radius: 4px;
+    opacity: 1;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    }
+
+.mat-grid-tile{
+background: #000000 0% 0% no-repeat padding-box;
+border-radius: 4px;
+opacity: 1;
+color: white;
+}

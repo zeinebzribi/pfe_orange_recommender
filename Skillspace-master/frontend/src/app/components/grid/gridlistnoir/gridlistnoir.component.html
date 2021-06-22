@@ -1,0 +1,39 @@
+<div class="noir" style="width: 100%;">
+
+<div>
+    <span>
+      <a><h1>Instructeurs</h1></a>
+      
+      <a 
+      *ngIf="!isAuthenticated"
+      routerLinkActive="active-link"
+      routerLink="/login"
+    ><button mat-flat-button >Voir Plus</button></a> 
+    </span>
+  
+  </div>
+  
+  
+  
+
+
+  <table border="0" align="center">
+    <tr>
+      <td><mat-card class="example-card" >
+
+        <img mat-card-image src="assets/img/instructeur 1@2x.png" alt="Formateur" routerLink="/logo">
+      
+      </mat-card></td> 
+      <td><mat-card class="example-card">
+
+        <img mat-card-image src="assets/img/instructeur 2@2x.png" alt="Formateur">
+      
+      </mat-card></td>
+      <td><mat-card class="example-card">
+
+        <img mat-card-image src="assets/img/Groupe 538@2x.png" alt="Formateur">
+      
+      </mat-card></td>
+    </tr>
+  </table>
+

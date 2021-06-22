@@ -1,0 +1,75 @@
+mat-form-field {
+  width: 100%;
+}
+
+button {
+  color: black;
+  background-color: #ff7500;
+  float: right;
+  width: 200px;
+}
+
+
+h1{
+  text-align: left;
+font: normal normal bold 40px/57px Arial;
+letter-spacing: -0.24px;
+color: #000000;
+opacity: 1;
+}
+
+
+.txt {
+  height: 40px;
+  width: 1110px;
+  border: 2px solid var(--unnamed-color-cccccc);
+background: #FFFFFF 0% 0% no-repeat padding-box;
+border: 2px solid #CCCCCC;
+opacity: 1;
+}
+
+.radio{
+  margin: .4rem;
+}
+
+
+.radio {
+  background: #F16E00 0% 0% no-repeat padding-box;
+opacity: 1;
+margin: .4rem;
+}
+
+
+
+
+.google {
+  color: white;
+  background-color: #4285F4;
+  float: right;
+  width: 200px;
+  position: absolute;
+    left: 700px;
+    top: 220px;
+}
+
+.linkedin {
+  color: black;
+  background-color: #d1d1d1;
+  float: right;
+  width: 220px;
+  position: absolute;
+    left: 1000px;
+    top: 220px;
+}
+
+
+.icongoogle {
+  width: 21px;
+height: 21px;
+}
+
+
+.iconlinkedin {
+  width: 21px;
+  height: 21px;
+}

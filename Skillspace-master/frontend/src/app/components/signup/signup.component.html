@@ -1,0 +1,73 @@
+<br>
+<br>
+<br>
+<div class="container">
+  <h1>Signup</h1>
+
+  <a> 
+    <button mat-raised-button class="google" >Signup with Google <img class="icongoogle" src="assets/img/icongoogle.png"/></button>
+</a>
+<a> 
+  <button mat-raised-button class="linkedin" >Signup with Linkedin <img class="iconlinkedin" src="assets/img/iconlinkedin.png"/></button>
+</a>
+<form [formGroup]="signupForm" (ngSubmit)="signup()" novalidate>
+  <mat-form-field>
+    <h2>Nom</h2>
+    <input class="txt" formControlName="name" formControlName="name" required  />
+  </mat-form-field>
+  <mat-form-field>
+    <h2>Prénom</h2>
+    <input class="txt" formControlName="lastname" />
+  </mat-form-field>
+  <mat-form-field>
+    <h2>Adresse mail</h2>
+    <input class="txt" placeholder="Orange@gmail.com" formControlName="email" required />
+  </mat-form-field>
+  <mat-form-field>
+    <h2>Numéro de téléphone</h2>
+    <input class="txt" placeholder="+216" formControlName="numtel" required />
+  </mat-form-field>
+  <mat-form-field>
+    <h2>Mot de passe</h2>
+    <input class="txt"
+    type="password"
+      formControlName="password" required 
+    />
+  </mat-form-field>
+  <mat-form-field>
+    <h2>Confirmé mot de passe</h2>
+    <input class="txt"
+    type="password"
+      formControlName=""
+    />
+  </mat-form-field>
+  <mat-form-field>
+  <h2>Genre</h2>
+  <input type="radio" id="Homme" name="drone" value="louie">
+  <label >Homme</label>
+  <br>
+  <input type="radio" id="Femme" name="drone" value="louie">
+  <label>Femme</label>
+  </mat-form-field>
+  <mat-form-field>
+    <h2>Photo de profil</h2>
+    <input type="file"
+       id="avatar" name="avatar"
+       accept="image/png, image/jpeg">
+    </mat-form-field>
+  <mat-form-field>
+    <h2>Liens</h2>
+    <input class="txt" formControlName="linkedin" required />
+    </mat-form-field>
+    <mat-form-field>
+      <input class="txt" formControlName="youtube" />
+      </mat-form-field>
+  <button
+    [disabled]="!signupForm.valid"
+    mat-raised-button
+    type="submit"
+  >
+    <span>Sign up</span> 
+  </button>
+</form>
+</div>
