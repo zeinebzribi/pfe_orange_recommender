@@ -1,55 +1,47 @@
-
 <div>
   <span>
-    <a><h1>Cours populaires</h1></a>
-    <a><button routerLink="/formation" mat-flat-button >Voir Plus</button></a>
+    <a>
+      <h1>Cours populaires</h1>
+    </a>
+    <a><button routerLink="/formation" mat-flat-button>Voir Plus</button></a>
   </span>
 
 </div>
- 
-   
-
-
-<mat-grid-list cols="3" >
-    <mat-grid-tile *ngFor="let item of cours">
-        <mat-card class="example-card" >
-
-            <img mat-card-image src="assets/img/blender_render-1280x720@2x.png" alt="Photo of a Shiba Inu"  >
-            <mat-card-content>
-              <p >
-                  {{item.course_name}}         
-              </p>
-              <a style="text-align: right; color: coral; font-size:9mm;">                  {{item.course_rating}}         
-              </a> 
-              <ngb-rating [max]="1" [(rate)]="starRating" [readonly]="true" style="color: coral; font-size:10mm;">
-              </ngb-rating>
-            </mat-card-content>
-          
-          </mat-card>
-    </mat-grid-tile>
-
-    
 
 
 
 
- 
+<mat-grid-list cols="3">
+  <mat-grid-tile (click)="moveToFormationDetail(item)" *ngFor="let item of cours">
+    <mat-card class="example-card">
+
+      <img mat-card-image  src="assets/img/blender_render-1280x720@2x.png" alt="Photo of a Shiba Inu">
+      <mat-card-content>
+        <p>
+          {{item.course_name}}
+        </p>
+        <a style="text-align: right; color: coral; font-size:9mm;"> {{item.course_rating}}
+        </a>
+        <ngb-rating [max]="1" [(rate)]="starRating" [readonly]="true" style="color: coral; font-size:10mm;">
+        </ngb-rating>
+      </mat-card-content>
+
+    </mat-card>
+  </mat-grid-tile>
+
+
+
+
+
+
+
 
 </mat-grid-list>
 
 
 
 
-<div><h1></h1>
-    <button disabled  ></button>
+<div>
+  <h1></h1>
+  <button disabled></button>
 </div>
-
-
-
-
-    
-
-
-
-
-

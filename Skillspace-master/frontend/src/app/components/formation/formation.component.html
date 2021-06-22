@@ -5,38 +5,41 @@
 </div>
 
 
-<div class="container"> 
+<div class="container">
 
-    <div>
-        <span>
-          <a><h1></h1></a>
-          <a><button routerLink="/formation" mat-flat-button disabled></button></a>
-        </span>
-      
-      </div>
-       
-    <mat-grid-list cols="3" >
+  <div>
+    <span>
+      <a>
+        <h1></h1>
+      </a>
+      <a><button routerLink="/formation" mat-flat-button disabled></button></a>
+    </span>
 
-        <mat-grid-tile (click) = "moveToFormationDetail(item)" *ngFor="let item of cours | paginate: config | slice:0:100  ">
-            <mat-card  class="example-card"  >
-    
-                <img mat-card-image src="assets/img/blender_render-1280x720@2x.png" alt="Photo of a Shiba Inu" >
-                <mat-card-content>
-                  <p >
-                      {{ item.course_name }}                 
-                  </p>
-                  <ngb-rating [max]="5" [(rate)]="starRating" [readonly]="false"></ngb-rating>
-    
-                </mat-card-content>
-              
-              </mat-card>
-        </mat-grid-tile>
-</mat-grid-list>
+  </div>
+
+  <mat-grid-list cols="3">
+
+    <mat-grid-tile (click)="moveToFormationDetail(item)" *ngFor="let item of cours | paginate: config | slice:0:100  ">
+      <mat-card class="example-card">
+
+        <img mat-card-image src="assets/img/blender_render-1280x720@2x.png" alt="Photo of a Shiba Inu">
+        <mat-card-content>
+          <p>
+            {{ item.course_name }}
+          </p>
+          <ngb-rating [max]="5" [(rate)]="starRating" [readonly]="false"></ngb-rating>
+
+        </mat-card-content>
+
+      </mat-card>
+    </mat-grid-tile>
+  </mat-grid-list>
 
 
-<div style="text-align: center;margin-top: 50px;">
-    <pagination-controls class="ngx-pagination" (pageChange)="pageChanged($event)" previousLabel="Précédent" nextLabel="Suivant"></pagination-controls>
+  <div style="text-align: center;margin-top: 50px;">
+    <pagination-controls class="ngx-pagination" (pageChange)="pageChanged($event)" previousLabel="Précédent"
+      nextLabel="Suivant"></pagination-controls>
 
-</div>
+  </div>
 
 </div>

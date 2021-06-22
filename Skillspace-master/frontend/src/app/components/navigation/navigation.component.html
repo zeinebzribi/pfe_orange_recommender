@@ -36,7 +36,45 @@
     
 
     <a>
-      <span><input type="text" placeholder="Recherche" class="recherche"></span>
+
+
+      <form>
+        <input class="recherche" matInput style="width: 368px;
+
+        height: 56px;
+        background: #FFFFFF 0% 0% no-repeat padding-box;
+        border: 1px solid #B2B2B2;
+        opacity: 1;
+        text-align: left;
+        font-style: normal;
+        font-family: 'Montserrat';
+        font-variant: normal;
+        font-weight:bold;
+        font-size: 16px;
+        font-family: Montserrat;letter-spacing: 0px;
+        color: #B2B2B2;
+        opacity: 1;
+
+" placeholder="Rechercher..." [matAutocomplete]="auto" [formControl]="productCtrl">
+
+        <mat-autocomplete #auto="matAutocomplete">
+            <mat-option (click)="productClicked(item)" *ngFor="let item of filteredProducts | async"
+                [value]="item.course_name">
+
+                <img class="example-option-img" aria-hidden
+                    src="assets/img/blender_render-1280x720@2x.png"
+                    height="25">
+
+                <span>{{item.course_name}}</span> |
+                <small>Boutique: {{item.nom}}</small>
+
+            </mat-option>
+        </mat-autocomplete>
+        
+    </form>
+
+
+
     </a>
 
     <a

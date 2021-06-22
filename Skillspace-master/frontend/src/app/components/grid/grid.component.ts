@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { NavigationExtras,Router } from '@angular/router';
+
 import { CoursService } from 'src/app/cours.service';
 @Component({
   selector: 'app-grid',
@@ -12,7 +14,7 @@ export class GridComponent implements OnInit {
   cours2:any
   cours3:any
   
-  constructor(private coursService:CoursService) { }
+  constructor(private coursService:CoursService,private router:Router) { }
 
   ngOnInit() {
     this.getTopRatedCours();
@@ -23,8 +25,18 @@ export class GridComponent implements OnInit {
     this.coursService.getTopRated().subscribe((objects: any[]) => {
 
       this.cours = objects["message"]
+      console.log(this.cours)
 
     });
+  }
+  
+  moveToFormationDetail(item)
+  {
+
+
+    console.log(item)
+    this.router.navigateByUrl('/pred/'+item._id)
+
   }
 }
 

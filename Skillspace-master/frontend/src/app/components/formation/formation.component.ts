@@ -17,8 +17,7 @@ export class FormationComponent implements OnInit {
   starRating = 0; 
   cours:any[]
   cours1:any
-  cours2:any
-  cours3:any
+
   
   ngOnInit() {
     this.getCour();
@@ -32,8 +31,7 @@ export class FormationComponent implements OnInit {
       console.log(this.cours.length)
 
       this.cours1=this.cours[1];
-      this.cours2=this.cours[2];
-      this.cours3=this.cours[3];
+ 
       console.log(this.cours1.course_name);
       this.config = {
         itemsPerPage: 6,
@@ -51,8 +49,7 @@ export class FormationComponent implements OnInit {
 
   moveToFormationDetail(item)
   {
-
-    let navigationExtras : NavigationExtras = {queryParams:{"id": item._id}}
+    console.log("ssssss")
     this.router.navigateByUrl('/pred/'+item._id)
 
   }

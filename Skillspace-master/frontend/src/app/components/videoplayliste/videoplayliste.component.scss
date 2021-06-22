@@ -4,10 +4,8 @@
     top: 150px;
 
 
-    width: 753px;
-    height: 60px;
     text-align: left;
-    font: normal normal bold 60px/60px Arial;
+    font: normal normal bold 40px/40px Arial;
     letter-spacing: -1.98px;
     color: #ffffff;
     opacity: 1;
@@ -48,26 +46,28 @@ a{
     text-decoration: underline;
   }
 
-
-
-
-
-
-
   .block2 {
     width: 1920px;
-height: 602px;
-background: #000000 0% 0% no-repeat padding-box;
-opacity: 1;
+    height: 602px;
+    background: #000000 0% 0% no-repeat padding-box;
+    opacity: 1;
 }
-
-
-
 
 .block3  {
+
     width: 1920px;
-height: 1213px;
+    height: 880px;
 }
+
+.block4  {
+    width: 1920px;
+height: 1700px;
+}
+
+
+
+
+
 
 .presentationformation {
     position: absolute;
@@ -496,3 +496,35 @@ letter-spacing: -0.14px;
 color: #FF7900;
 opacity: 1;
 }
+
+.sim {
+    position: absolute;
+    left: 350px;
+    top: 1700px;
+    color: var(--unnamed-color-ff7900);
+    text-align: left;
+    font: bold 40px/50px Arial;
+    letter-spacing: -0.14px;
+    color: #FF7900;
+    opacity: 1;
+}
+
+
+.mat-grid-tile{
+    background: #000000 0% 0% no-repeat padding-box;
+    border-radius: 10px;
+    opacity: 1;
+    color: white;
+    }
+    
+
+    .mat-card {
+        background: #000000 0% 0% no-repeat padding-box;
+        border-radius: 4px;
+        opacity: 1;
+        color: white;
+        display: flex;
+        flex-direction: column;
+        }
+    
+    

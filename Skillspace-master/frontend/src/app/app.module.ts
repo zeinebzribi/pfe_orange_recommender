@@ -15,7 +15,7 @@ import { MatListModule } from "@angular/material/list";
 import { MatToolbarModule } from "@angular/material/toolbar";
 import { MatTabsModule } from "@angular/material/tabs";
 import { MatGridListModule } from "@angular/material/grid-list";
-
+import { MatAutocompleteModule } from '@angular/material/autocomplete';
 
 import { NavigationComponent } from "./components/navigation/navigation.component";
 import { SignupComponent } from "./components/signup/signup.component";

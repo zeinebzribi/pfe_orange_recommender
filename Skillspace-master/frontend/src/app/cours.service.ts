@@ -25,4 +25,11 @@ export class CoursService {
   public getCoursPerName(name:string): Observable<any> {
     return this.http.get<any>(this.baseUrl + 'pred/'+name);
   }
+
+
+  public getCoursById(id:string): Observable<any> {
+    return this.http.get<any>(this.baseUrl + 'getFormationById/'+id);
+  }
+
+
 }

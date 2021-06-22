@@ -17,10 +17,6 @@ import { ChatComponent } from "./components/chat/chat.component";
 import { VideoplaylisteComponent } from "./components/videoplayliste/videoplayliste.component";
 import { from } from "rxjs";
 
-
-
-
-
 const routes: Routes = [
   { path: "", component: HomeComponent },
   { path: "posts", component: PostsComponent, canActivate: [AuthGuard] },

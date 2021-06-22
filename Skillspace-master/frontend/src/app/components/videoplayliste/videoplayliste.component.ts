@@ -29,6 +29,7 @@ export class VideoplaylisteComponent implements OnInit {
   id = ""
   cours:any[]
   coursSimilaires:any[] = []
+  detailCours:any
 
   constructor(private serviceRoute: ActivatedRoute,private coursService:CoursService) { }
   ngOnInit() {
@@ -36,9 +37,8 @@ export class VideoplaylisteComponent implements OnInit {
    // console.log(this.name);
    
    this.id = this.serviceRoute.snapshot.params.id
-   
+   this.getCoursById(this.id);
    this.getCour();
-
 
    }
 
@@ -87,5 +87,21 @@ export class VideoplaylisteComponent implements OnInit {
       this.cours = this.coursSimilaires
 
     });
+  }
+
+
+
+  getCoursById(id)
+  {
+
+    this.coursService.getCoursById(id).subscribe((objects: any)=>{
+
+
+      this.detailCours = JSON.parse(objects["message"])[0]
+      
+
+    })
+
+
   }
 }
