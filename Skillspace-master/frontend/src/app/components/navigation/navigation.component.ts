@@ -74,6 +74,16 @@ export class NavigationComponent implements OnInit {
 
   }
 
+    
+  moveToFormationDetail(item)
+  {
+
+
+    console.log(item)
+    this.router.navigateByUrl('/pred/'+item._id)
+
+  }
+
 
 }
 

@@ -42,7 +42,7 @@
         [formControl]="coursFormControl">
 
       <mat-autocomplete #auto="matAutocomplete">
-        <mat-option *ngFor="let item of filteredCourses | async" [value]="item.course_name">
+        <mat-option (click)="moveToFormationDetail(item)" *ngFor="let item of filteredCourses | async" [value]="item.course_name">
 
 
           <span>{{item.course_name}}</span> |
