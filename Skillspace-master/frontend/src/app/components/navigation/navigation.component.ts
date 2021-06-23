@@ -1,45 +1,46 @@
 import { Component, OnInit } from "@angular/core";
 import { Router } from "@angular/router";
 import { Observable } from "rxjs";
-import { HttpClient, HttpHeaders } from '@angular/common/http';
 
 import { AuthService } from "src/app/services/auth.service";
-import { startWith,map } from "rxjs/operators";
+import { CoursService } from "src/app/cours.service";
 
+import { startWith,map,find } from "rxjs/operators";
+import { FormControl } from "@angular/forms";
+
+export interface Cours {
+
+  course_name: string;
+
+}
 
 @Component({
   selector: "app-navigation",
   templateUrl: "./navigation.component.html",
   styleUrls: ["./navigation.component.scss"],
 })
-export interface Product {
-  idproduit: string;
-  title: string;
-  description: string;
-  categorie_idcategorie: string;
-  boutique_idboutique:string;
-  nom:string;
-}
 
 
 export class NavigationComponent implements OnInit {
   isAuthenticated = false;
   cours:any[]
 
+  coursFormControl = new FormControl()
+
   constructor(private authService: AuthService, private router: Router,private coursService:CoursService) {}
 
   ngOnInit(): void {
+    this.getCour() 
     this.authService.isUserLoggedIn$.subscribe((isLoggedIn) => {
       this.isAuthenticated = isLoggedIn;
     });
 
-    this.filteredProducts = this.productCtrl.valueChanges.pipe(
-      startWith(''),
-      map(state => state ? this._filterStates(state) : this.products.slice())
-    );
+   
 
   }
-  filteredProducts: Observable<Product[]>;
+
+
+  filteredCourses: Observable<Cours[]>;
 
   logout(): void {
     localStorage.removeItem("token");
@@ -47,10 +48,10 @@ export class NavigationComponent implements OnInit {
     this.router.navigate(["login"]);
   }
 
-  private _filterStates(value: string): Product[] {
+  private _filterStates(value: string): Cours[] {
     const filterValue = value.toLowerCase();
-
-    return this.products.filter(state => state.title.toLowerCase().indexOf(filterValue) === 0);
+    console.log("filterValue")
+    return this.cours.filter(state => state.course_name.toLowerCase().indexOf(filterValue) === 0);
   }
 
 
@@ -58,8 +59,19 @@ export class NavigationComponent implements OnInit {
 
     this.coursService.getCours().subscribe((objects: any) => {
       this.cours = JSON.parse(objects.message);
-      
+      if(this.coursFormControl.value != null)
+      {
+        console.log(this.coursFormControl.value)
+      }
+      this.filteredCourses = this.coursFormControl.valueChanges.pipe(
+
+        startWith(''),
+        map(state => state ? this._filterStates(state) : [])
+
+        ) ;
+    
     });
+
   }
 
 

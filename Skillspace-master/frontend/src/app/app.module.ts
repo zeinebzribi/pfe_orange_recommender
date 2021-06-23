@@ -1,6 +1,6 @@
 import { BrowserModule } from "@angular/platform-browser";
 import { NgModule } from "@angular/core";
-import { NgForm, ReactiveFormsModule } from "@angular/forms";
+import { FormsModule,FormControl, ReactiveFormsModule } from "@angular/forms";
 import { HttpClientModule, HTTP_INTERCEPTORS } from "@angular/common/http";
 
 import { AppRoutingModule } from "./app-routing.module";
@@ -46,6 +46,7 @@ import { ChatComponent } from './components/chat/chat.component';
 import { PaiementComponent } from './components/paiement/paiement.component';
 import { VideoplaylisteComponent } from './components/videoplayliste/videoplayliste.component';
 
+
 import { NgxPaginationModule } from 'ngx-pagination';
 
 import {VgCoreModule} from '@videogular/ngx-videogular/core';
@@ -87,6 +88,8 @@ import {VgBufferingModule} from '@videogular/ngx-videogular/buffering';
   ],
   imports: [
     BrowserModule,
+    FormsModule,
+    ReactiveFormsModule,
     AppRoutingModule,
     NoopAnimationsModule,
     MatButtonModule,
@@ -95,7 +98,7 @@ import {VgBufferingModule} from '@videogular/ngx-videogular/buffering';
     MatInputModule,
     MatListModule,
     MatToolbarModule,
-    ReactiveFormsModule,
+
     HttpClientModule,
     MatTabsModule,
     MatGridListModule,
@@ -104,9 +107,8 @@ import {VgBufferingModule} from '@videogular/ngx-videogular/buffering';
     VgControlsModule,
     VgOverlayPlayModule,
     VgBufferingModule,
-    
-    NgxPaginationModule
-
+    MatAutocompleteModule,
+    NgxPaginationModule,
     
   ],
   providers: [

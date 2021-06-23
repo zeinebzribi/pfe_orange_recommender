@@ -1,5 +1,4 @@
-
-  <!--div >
+<!--div >
     <a href="/"><img routerLink="/home" src="assets/logo skill blanc@2x.png" alt="Logo Orange" class="logo"></a>
 
 
@@ -8,128 +7,75 @@
     <a *ngIf="isAuthenticated" (click)="logout()" routerLinkActive="active-link" routerLink="/home"><button mat-button class="logout">Logout</button></a>
     <a *ngIf="!isAuthenticated" routerLinkActive="active-link" routerLink="/signup"> <button mat-button class="signup">Signup</button></a>
   </div-->
-    <!--a routerLink="/"><span></span></a-->
-    
-    <!--a class="recherche"> <input type="text" value="Recherche"></a-->
-    <!--a><mat-icon matBadge="15" matBadgeColor="panier">home</mat-icon> </a-->
-   
-    
+<!--a routerLink="/"><span></span></a-->
+
+<!--a class="recherche"> <input type="text" value="Recherche"></a-->
+<!--a><mat-icon matBadge="15" matBadgeColor="panier">home</mat-icon> </a-->
+
+
 
 <mat-toolbar style="width: 100%;">
- 
+
   <span>
     <!--a>
       <span><img routerLink="/home" src="assets/logo skill blanc@2x.png" class="header_menu_logo" alt="Logo Orange"></span>
-    </a-->  
+    </a-->
     <a routerLink="/">
       <span></span>
 
     </a>
   </span>
 
- 
+
   <span>
 
     <a>
-      <span><img routerLink="/home" src="assets/logo skill blanc@2x.png" class="header_menu_logo" alt="Logo Orange"></span>
-    </a>
-    
-
-    <a>
-
-
-      <form>
-        <input class="recherche" matInput style="width: 368px;
-
-        height: 56px;
-        background: #FFFFFF 0% 0% no-repeat padding-box;
-        border: 1px solid #B2B2B2;
-        opacity: 1;
-        text-align: left;
-        font-style: normal;
-        font-family: 'Montserrat';
-        font-variant: normal;
-        font-weight:bold;
-        font-size: 16px;
-        font-family: Montserrat;letter-spacing: 0px;
-        color: #B2B2B2;
-        opacity: 1;
-
-" placeholder="Rechercher..." [matAutocomplete]="auto" [formControl]="productCtrl">
-
-        <mat-autocomplete #auto="matAutocomplete">
-            <mat-option (click)="productClicked(item)" *ngFor="let item of filteredProducts | async"
-                [value]="item.course_name">
-
-                <img class="example-option-img" aria-hidden
-                    src="assets/img/blender_render-1280x720@2x.png"
-                    height="25">
-
-                <span>{{item.course_name}}</span> |
-                <small>Boutique: {{item.nom}}</small>
-
-            </mat-option>
-        </mat-autocomplete>
-        
-    </form>
-
-
-
+      <span><img routerLink="/home" src="assets/logo skill blanc@2x.png" class="header_menu_logo"
+          alt="Logo Orange"></span>
     </a>
 
-    <a
-    
-    *ngIf="isAuthenticated"
-    routerLinkActive="active-link"
-    routerLink="/notifapp"
-    >
+
+    <span>
+
+      
+      <input class="recherche" matInput placeholder="Rechercher..." [matAutocomplete]="auto"
+        [formControl]="coursFormControl">
+
+      <mat-autocomplete #auto="matAutocomplete">
+        <mat-option *ngFor="let item of filteredCourses | async" [value]="item.course_name">
+
+
+          <span>{{item.course_name}}</span> |
+
+        </mat-option>
+      </mat-autocomplete>
+
+
+
+  </span>
+
+
+    <a *ngIf="isAuthenticated" routerLinkActive="active-link" routerLink="/notifapp">
       <span><img src="/assets/img/Shape@2x.png" alt="Med Arbi" class="imgnotif"></span>
     </a>
 
-    <a
-    *ngIf="isAuthenticated"
-    routerLinkActive="active-link"
-    routerLink="/panier"
-  >
-    <span><img src="/assets/img/Functional_UI - ic_Buy@2x.png" alt="Med Arbi" class="imgpan"></span>
-  </a>
- 
-  <a
-    
-  *ngIf="isAuthenticated"
-  routerLinkActive="active-link"
-  routerLink="/posts"
-  >
-    <span><img src="/assets/img/aarbi@2x.png" alt="Med Arbi" class="imgprof"></span>
-  </a>
+    <a *ngIf="isAuthenticated" routerLinkActive="active-link" routerLink="/panier">
+      <span><img src="/assets/img/Functional_UI - ic_Buy@2x.png" alt="Med Arbi" class="imgpan"></span>
+    </a>
 
-    <a
-      *ngIf="!isAuthenticated"  
-      routerLinkActive="active-link"
-      routerLink="/login"
-    >
-    <button mat-button class="login">Login</button>
+    <a *ngIf="isAuthenticated" routerLinkActive="active-link" routerLink="/posts">
+      <span><img src="/assets/img/aarbi@2x.png" alt="Med Arbi" class="imgprof"></span>
     </a>
-    <a
-      *ngIf="isAuthenticated"
-      (click)="logout()"
-      routerLinkActive="active-link"
-      routerLink="/login"
-    >
-    <button mat-button class="logout">Logout</button>
+
+    <a *ngIf="!isAuthenticated" routerLinkActive="active-link" routerLink="/login">
+      <button mat-button class="login">Login</button>
     </a>
-    <a
-      *ngIf="!isAuthenticated"
-      routerLinkActive="active-link"
-      routerLink="/signup"
-    >
-    <button mat-button class="signup">Signup</button>
+    <a *ngIf="isAuthenticated" (click)="logout()" routerLinkActive="active-link" routerLink="/login">
+      <button mat-button class="logout">Logout</button>
+    </a>
+    <a *ngIf="!isAuthenticated" routerLinkActive="active-link" routerLink="/signup">
+      <button mat-button class="signup">Signup</button>
     </a>
   </span>
 
 </mat-toolbar>
-
-
-
-
-
