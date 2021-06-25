@@ -1,6 +1,6 @@
 <div class="container1" style="width: 100%;">
 
-  <h1 style="width: 100%;">Nos Cours</h1>
+  <h1 style="width: 100%;">Les cours de Skillspace</h1>
 
 </div>
 
@@ -17,17 +17,18 @@
 
   </div>
 
-  <mat-grid-list cols="3">
+  <mat-grid-list cols="3" >
 
     <mat-grid-tile (click)="moveToFormationDetail(item)" *ngFor="let item of cours | paginate: config | slice:0:100  ">
-      <mat-card class="example-card">
+      <mat-card class="example-card" style="margin-top: 10px; margin-inline: 5px;align-items: center;margin-block-end: 20mm;border-color: black;">
 
-        <img mat-card-image src="assets/img/blender_render-1280x720@2x.png" alt="Photo of a Shiba Inu">
+        <img mat-card-image style="width:300px;height:290px;align-items: center;margin-inline: 10px;"
+         src="http://127.0.0.1:5006/getImageByName/img/{{ item.images }}" alt="Photo of a Shiba Inu">
         <mat-card-content>
-          <p>
+          <p style="font-size:13pt;">
             {{ item.course_name }}
           </p>
-          <ngb-rating [max]="5" [(rate)]="starRating" [readonly]="false"></ngb-rating>
+          <ngb-rating style="font-size:13pt;font-weight: bold;" [max]="5" [(rate)]="starRating" [readonly]="false"></ngb-rating>
 
         </mat-card-content>
 
@@ -36,7 +37,7 @@
   </mat-grid-list>
 
 
-  <div style="text-align: center;margin-top: 50px;">
+  <div style="text-align: center;margin-top: 50px;size: 50px;">
     <pagination-controls class="ngx-pagination" (pageChange)="pageChanged($event)" previousLabel="Précédent"
       nextLabel="Suivant"></pagination-controls>
 

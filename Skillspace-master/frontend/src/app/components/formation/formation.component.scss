@@ -5,6 +5,8 @@ width: 1920px;
 height: 330px;
 background: #000000 0% 0% no-repeat padding-box;
 opacity: 1;
+border-color: white;
+
 }
 
 
@@ -14,6 +16,8 @@ h1 {
   top: 250px;
     font: bold 70px/60px Arial;
     color: white;
+    border-color: black;
+
 }
 
 
@@ -23,7 +27,11 @@ left: 0px;
 width: 1920px;
 height: auto;
 background: white 0% 0% no-repeat padding-box;
-opacity: 1;
+opacity: 10;
+border-color: black;
+font: bold ;
+
+
 }
 
 .mat-card {
@@ -36,8 +44,8 @@ opacity: 1;
     }
 
 .mat-grid-tile{
-background: #000000 0% 0% no-repeat padding-box;
-border-radius: 4px;
-opacity: 1;
-color: white;
+    background: #000000 0% 0% no-repeat padding-box;
+    border-radius: 4px;
+    opacity: 1;
+    color: white;
 }

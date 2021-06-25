@@ -13,11 +13,12 @@
 
 <mat-grid-list cols="3">
   <mat-grid-tile (click)="moveToFormationDetail(item)" *ngFor="let item of cours">
-    <mat-card class="example-card">
+    <mat-card class="example-card" style="margin-top: 10px; margin-inline: 5px;align-items: center;margin-block-end: 20mm;border-color: black;">
 
-      <img mat-card-image  src="assets/img/blender_render-1280x720@2x.png" alt="Photo of a Shiba Inu">
+      <img mat-card-image style="margin-inline: 10px;width:300px;height:290px;align-items: center;margin-left: 0.5cm;"  
+      src="http://127.0.0.1:5006/getImageByName/img/{{ item.images }}" alt="Photo of a Shiba Inu">
       <mat-card-content>
-        <p>
+        <p style="font-size:13pt;">
           {{item.course_name}}
         </p>
         <a style="text-align: right; color: coral; font-size:9mm;"> {{item.course_rating}}
@@ -42,6 +43,5 @@
 
 
 <div>
-  <h1></h1>
-  <button disabled></button>
+
 </div>

@@ -23,7 +23,7 @@ def pred(course_nam):
     #course_nam=str(course_nam)
     l=[]
     udemy_all_courses = pd.read_csv("udemy_all_courses.csv",sep='\t')
-    udemy_all_courses=udemy_all_courses.reset_index()
+    #udemy_all_courses=udemy_all_courses.reset_index()
     udemy_all_courses["combined_features"] = udemy_all_courses.apply(combined_features, axis =1)
     sentences = udemy_all_courses['combined_features']
     sentence_vec = loadtxt('weights.csv', delimiter=',') 
@@ -50,10 +50,10 @@ def pred(course_nam):
 def getallcources():
 
     udemy_all_courses = pd.read_csv("udemy_all_courses.csv",sep='\t')
-
     #print(udemy_all_courses.columns)
     result = udemy_all_courses.to_json(orient="records")
     parsed = json.loads(result)
+
 
     return jsonify(message=json.dumps(parsed, indent=4),status=200),200
 
@@ -82,7 +82,7 @@ def getMostRatedCourse():
 	q_course = udemy_all_courses.copy().loc[udemy_all_courses['course_number_ratings'] >= m]
 	q_course['score'] = q_course.apply(weighted_rating, axis=1)
 	q_course = q_course.sort_values('score', ascending=False)
-	most_rated = q_course[['_id','course_name', 'course_number_ratings', 'course_rating', 'score']].head(6)
+	most_rated = q_course[['_id','course_name', 'course_number_ratings', 'course_rating', 'score','images']].head(6)
 	
 	result = most_rated.to_json(orient="records")
 	parsed = json.loads(result)
