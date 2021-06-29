@@ -24,16 +24,35 @@ export interface Cours {
 export class NavigationComponent implements OnInit {
   isAuthenticated = false;
   cours:any[]
+  user : any;
 
   coursFormControl = new FormControl()
 
   constructor(private authService: AuthService, private router: Router,private coursService:CoursService) {}
 
   ngOnInit(): void {
+
+    try{
+
+      this.user = JSON.parse(sessionStorage.getItem('user'))
+
+      if(this.user.auth== true)
+      {
+        this.isAuthenticated = true 
+      }else{
+        console.log(this.user)
+        this.isAuthenticated = false
+      }
+
+    }catch{
+
+      this.isAuthenticated = false
+
+    }
+    
+  
+
     this.getCour() 
-    this.authService.isUserLoggedIn$.subscribe((isLoggedIn) => {
-      this.isAuthenticated = isLoggedIn;
-    });
 
    
 
@@ -43,9 +62,8 @@ export class NavigationComponent implements OnInit {
   filteredCourses: Observable<Cours[]>;
 
   logout(): void {
-    localStorage.removeItem("token");
-    this.authService.isUserLoggedIn$.next(false);
-    this.router.navigate(["login"]);
+      this.isAuthenticated = false
+    
   }
 
   private _filterStates(value: string): Cours[] {

@@ -14,12 +14,12 @@ module.exports = class User {
   }
 
   static find(email) {
-    return db.execute('SELECT * FROM users WHERE email = ?', [email]);
+    return db.execute('SELECT * FROM user WHERE email = ?', [email]);
   }
 
   static save(user) {
     return db.execute(
-      'INSERT INTO users (name,lastname,email,numtel,password,genre,photo,linkedin,youtube) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)',
+      'INSERT INTO utilisateur (name,lastname,email,numtel,password,genre,photo,linkedin,youtube) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)',
       [user.name, user.lastname, user.email, user.numtel, user.password, user.genre, user.photo, user.linkedin, user.youtube]
     );
   }

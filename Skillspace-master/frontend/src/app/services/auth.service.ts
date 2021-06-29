@@ -3,7 +3,7 @@ import { HttpClient, HttpHeaders } from "@angular/common/http";
 import { Router } from "@angular/router";
 
 import { Observable, BehaviorSubject } from "rxjs";
-import { first, catchError, tap } from "rxjs/operators";
+import { first, catchError, tap, retry } from "rxjs/operators";
 
 import { User } from "../models/User";
 import { ErrorHandlerService } from "./error-handler.service";
@@ -12,7 +12,7 @@ import { ErrorHandlerService } from "./error-handler.service";
   providedIn: "root",
 })
 export class AuthService {
-  private url = "http://localhost:3000/auth";
+  private url = "http://localhost:3000/skillspace/auth";
 
   isUserLoggedIn$ = new BehaviorSubject<boolean>(false);
   userId: Pick<User, "id">;
@@ -34,6 +34,14 @@ export class AuthService {
         first(),
         catchError(this.errorHandlerService.handleError<User>("signup"))
       );
+  }
+
+  signin(item): Observable<any> {
+    return this.http
+      .post<any>(this.url+"/login",item,this.httpOptions)
+      .pipe(
+        retry(0)
+      )
   }
 
   login(

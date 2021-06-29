@@ -3,7 +3,7 @@
     <a>
       <h1>Cours populaires</h1>
     </a>
-    <a><button routerLink="/formation" mat-flat-button>Voir Plus</button></a>
+    <a><button  routerLinkActive="active-link"  routerLink="/formation" mat-flat-button>Voir Plus</button></a>
   </span>
 
 </div>
@@ -11,14 +11,16 @@
 
 
 
-<mat-grid-list cols="3">
-  <mat-grid-tile (click)="moveToFormationDetail(item)" *ngFor="let item of cours">
+<mat-grid-list [gutterSize]="'10px'" cols="3" >
+  <mat-grid-tile (click)="moveToFormationDetail(item)"  *ngFor="let item of cours" >
+
+
     <mat-card class="example-card" style="margin-top: 10px; margin-inline: 5px;align-items: center;margin-block-end: 20mm;border-color: black;">
 
       <img mat-card-image style="margin-inline: 10px;width:300px;height:290px;align-items: center;margin-left: 0.5cm;"  
       src="http://127.0.0.1:5006/getImageByName/img/{{ item.images }}" alt="Photo of a Shiba Inu">
-      <mat-card-content>
-        <p style="font-size:13pt;">
+      <mat-card-content >
+        <p style="font-size:13pt;on">
           {{item.course_name}}
         </p>
         <a style="text-align: right; color: coral; font-size:9mm;"> {{item.course_rating}}

@@ -70,6 +70,8 @@
     <a *ngIf="!isAuthenticated" routerLinkActive="active-link" routerLink="/login">
       <button mat-button class="login">Login</button>
     </a>
+
+    
     <a *ngIf="isAuthenticated" (click)="logout()" routerLinkActive="active-link" routerLink="/login">
       <button mat-button class="logout">Logout</button>
     </a>

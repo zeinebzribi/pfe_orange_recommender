@@ -50,8 +50,14 @@ exports.signup = async (req, res, next) => {
 exports.login = async (req, res, next) => {
   const email = req.body.email;
   const password = req.body.password;
+  const user = await User.find("email");
+
+  res.status(200).json({  });
+
+  console.log(email)
+  /*
   try {
-    const user = await User.find(email);
+    const user = await User.find("email");
 
     if (user[0].length !== 1) {
       const error = new Error('A user with this email could not be found.');
@@ -83,5 +89,5 @@ exports.login = async (req, res, next) => {
       err.statusCode = 500;
     }
     next(err);
-  }
+  }*/
 };

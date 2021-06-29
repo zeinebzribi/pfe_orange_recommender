@@ -1,7 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { NavigationExtras,Router } from '@angular/router';
+import { AuthService } from "src/app/services/auth.service";
 
 import { CoursService } from 'src/app/cours.service';
+import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 @Component({
   selector: 'app-grid',
   templateUrl: './grid.component.html',
@@ -13,11 +15,14 @@ export class GridComponent implements OnInit {
   cours1:any
   cours2:any
   cours3:any
-  
-  constructor(private coursService:CoursService,private router:Router) { }
+  user : any;
+  isAuthenticated = false;
+
+  constructor(private coursService:CoursService,private router:Router,private authService: AuthService, public modalService:NgbModal) { }
 
   ngOnInit() {
     this.getTopRatedCours();
+ 
   }
   
 
@@ -33,9 +38,27 @@ export class GridComponent implements OnInit {
   moveToFormationDetail(item)
   {
 
+    try{
 
-    console.log(item)
-    this.router.navigateByUrl('/pred/'+item._id)
+      this.user = JSON.parse(sessionStorage.getItem('user'))
+
+      if(this.user.auth== true)
+      { console.log(item)
+        this.router.navigateByUrl('/pred/'+item._id)
+        this.isAuthenticated = true 
+      }else{
+        console.log(this.user)
+
+        this.isAuthenticated = false
+      }
+
+    }catch{
+      const modalRef = this.modalService.open('Merci de vous connectez pour accéder aux cours.');
+
+      this.isAuthenticated = false
+
+    }
+   
 
   }
 }
