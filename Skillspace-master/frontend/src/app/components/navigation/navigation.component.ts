@@ -63,7 +63,7 @@ export class NavigationComponent implements OnInit {
 
   logout(): void {
       this.isAuthenticated = false
-    
+      sessionStorage.setItem('user','');
   }
 
   private _filterStates(value: string): Cours[] {

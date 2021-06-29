@@ -54,7 +54,7 @@ export class GridComponent implements OnInit {
 
     }catch{
       const modalRef = this.modalService.open('Merci de vous connectez pour accéder aux cours.');
-
+      
       this.isAuthenticated = false
 
     }
