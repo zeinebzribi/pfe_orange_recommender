@@ -13,12 +13,12 @@ export class VideoplaylisteComponent implements OnInit {
   videoItems = [
     {
       name: 'First Video',
-      src: 'http://static.videogular.com/assets/videos/big_buck_bunny_720p_h264.mov',
+      src: 'assets/ds.mp4',
       type: 'video/mp4'
     },
     {
       name: 'Second Video',
-      src: 'http://static.videogular.com/assets/videos/videogular.mp4',
+      src: 'assets/js.mp4',
       type: 'video/mp4'
     }
   ];
@@ -74,18 +74,21 @@ export class VideoplaylisteComponent implements OnInit {
 
     this.coursService.getCoursPerName(this.id).subscribe((objects: any) => {
       this.cours = JSON.parse(objects["message"]);
-
       this.cours.forEach(element => {
         
-        let el = element
-        let index = {index:Object.keys(element["index"])}
+     
+          let el = element
+          let index = {index:Object.keys(element["index"])}
+
+          if (this.id != (el._id[index.index[0]]))
+          {
+            this.coursSimilaires.push({el,index})  
+          }
       
-        this.coursSimilaires.push({el,index})  
-        
       });
 
       this.cours = this.coursSimilaires
-
+  
     });
   }
 
@@ -94,12 +97,9 @@ export class VideoplaylisteComponent implements OnInit {
   getCoursById(id)
   {
 
-    this.coursService.getCoursById(id).subscribe((objects: any)=>{
-
-
-      this.detailCours = JSON.parse(objects["message"])[0]
-      
-
+       this.coursService.getCoursById(id).subscribe((objects: any)=>{
+      this.detailCours = JSON.parse(objects["message"])[0]   
+      console.log(this.detailCours)
     })
 
 

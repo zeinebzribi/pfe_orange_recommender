@@ -33,13 +33,13 @@ def pred(course_nam):
     except:
         return jsonify(message='not found',status=500),500
         
-    idx = (-arrayy).argsort()[:5]
+    idx = (-arrayy).argsort()[:7]
     
-    temp = np.argpartition(-arrayy, 4)
+    temp = np.argpartition(-arrayy, 6)
     
-    result_args = temp[:4]
+    result_args = temp[:6]
     
-    sorted_results = result_args[0][0:4]
+    sorted_results = result_args[0][:6]
     
     for item in sorted_results:
         l.append(udemy_all_courses[udemy_all_courses.index==item])

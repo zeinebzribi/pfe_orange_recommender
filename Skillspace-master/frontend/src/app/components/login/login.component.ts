@@ -39,7 +39,12 @@ export class LoginComponent implements OnInit {
         if(res.auth==true){
           
           sessionStorage.setItem('user', JSON.stringify(res));
-          this.router.navigateByUrl('/')
+          this.router.navigate(['/']).then(()=>{
+
+            location.reload()
+
+
+          })
 
         }else{
 

@@ -35,18 +35,22 @@ export class NavigationComponent implements OnInit {
     try{
 
       this.user = JSON.parse(sessionStorage.getItem('user'))
+      console.log(this.user)
 
       if(this.user.auth== true)
       {
+
         this.isAuthenticated = true 
+
       }else{
-        console.log(this.user)
+
         this.isAuthenticated = false
       }
 
     }catch{
 
       this.isAuthenticated = false
+      console.log(this.user)
 
     }
     
@@ -64,6 +68,7 @@ export class NavigationComponent implements OnInit {
   logout(): void {
       this.isAuthenticated = false
       sessionStorage.setItem('user','');
+      location.reload()
   }
 
   private _filterStates(value: string): Cours[] {
